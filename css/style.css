@@ -22,6 +22,10 @@ h1, p, div{
     font-weight: 700;
 }
 
+.container {
+    display: flex;
+    background-color: DodgerBlue;
+}
 
 .contenitore{
     background-color: #f1f1f1;
