@@ -1,3 +1,23 @@
+@font-face{
+    font-family: 'Syncopate';
+    src: url('fonts/Syncopate-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Syncopate';
+    src: url('fonts/Syncopate-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 *{
-    background-color: black;
+    background-color: #f9f6f2;
+
+}
+
+h1{
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 700;
 }
