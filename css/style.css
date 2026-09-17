@@ -1,36 +1,120 @@
 @font-face{
-    font-family: 'Syncopate';
-    src: url('fonts/Syncopate-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
+    font-family: Syncopate;
+    src: url(../fonts/Syncopate-Regular.woff2);
 }
 
 @font-face{
-    font-family: 'Syncopate';
-    src: url('fonts/Syncopate-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
+    font-family: Audiowide;
+    src: url(../fonts/Audiowide-Regular.ttf);
 }
 
-*{
-    background-color: #f9f6f2;
-
+:root {
+    --glass-bg: linear-gradient(158deg,rgba(156, 225, 255, 0.8) 0%, rgba(58, 107, 199, 0.8) 100%);;
+    --glass-border: rgba(255, 255, 255, 1);
+    --text-color: #0f172a;
+    --accent-blue: #0284c7;
+    --gloss-highlight: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 100%);
 }
 
-h1, p, div{
-    font-family: 'Syncopate', sans-serif;
-    font-weight: 700;
+body{
+    overflow: auto;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='2' fill='%230284c7' fill-opacity='1'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    animation: muoviDiagonale 30s linear infinite;
 }
 
-.contenitore {
+p, a{
+    font-family: sans-serif;
+    font-size: 1.1rem;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.header{
+    overflow: hidden;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 1.5rem;
+    color:  #0f172a;
+
     display: flex;
-    background-color: DodgerBlue;
+    margin: 1.4rem;
+    padding: 0.6rem;
+    padding-bottom: 1rem;
+    height: 40vh;
+
+    border-radius: 2rem;
+    background-image:var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 rgba(0, 119, 182, 0.08);
+
+
+    justify-content: center;
+    align-items: flex-end;
 }
 
-.contenitore{
-    background-color: #f1f1f1;
-    margin: 1rem;
-    padding: 2rem;
-    font-size: 3rem;
+.main{
+    margin: 0.4rem;
+    padding: 0.6rem;
+    height: 49vh;
+
+    display: flex;
+    gap: 1vw;
+
 }
 
+#contenitoreSX{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+#info, .boxMain{
+    flex: 1;
+    border-radius: 2rem;
+    padding: 1vw;
+
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+
+    box-shadow: 0 8px 32px 0 rgba(0, 119, 182, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+
+
+.boxMain{
+    font-family: 'Audiowide', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.9rem;
+    color:  #0f172a;
+}
+
+#info{
+    font-family: 'Audiowide', sans-serif;
+    font-size: 1.9rem;
+    color:  #0f172a;
+}
+
+@keyframes muoviDiagonale {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 400px 400px;
+    }
+}
+
+.boxMain:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px 0 rgba(0, 119, 182, 0.15);
+    border-color: rgba(255, 255, 255, 1);
+}
